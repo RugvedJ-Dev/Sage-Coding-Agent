@@ -1,0 +1,375 @@
+/* Global Styles */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --dark-color: #2c3e50; /* Dark Navy */
+    --light-color: #ecf0f1; /* Light Gray */
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f4f7f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Typography */
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+}
+
+.primary-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: var(--dark-color);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    transition: transform 0.5s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.intro-text h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.tagline {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #bdc3c7;
+}
+
+/* About Section */
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.skills {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.skill-list span {
+    display: inline-block;
+    background: var(--light-color);
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.portfolio-item {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-item h3 {
+    margin: 15px 15px 5px;
+    color: var(--dark-color);
+}
+
+.portfolio-item p {
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.view-btn {
+    width: 90%;
+    margin: 0 auto 15px auto;
+    background: var(--primary-color);
+}
+
+.view-btn:hover {
+    background: #2980b9;
+}
+
+/* Filter Controls */
+.filter-controls {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.filter-btn:hover:not(.active) {
+    background: #dcdde1;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f7f9;
+    text-align: center;
+}
+
+.contact-message {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+#contactForm button[type="submit"] {
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+}
+
+.status-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-text {
+        padding-top: 20px;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    header nav ul {
+        justify-content: center;
+        padding-top: 10px;
+    }
+    header nav ul li {
+        margin: 0 10px;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    footer .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2em;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

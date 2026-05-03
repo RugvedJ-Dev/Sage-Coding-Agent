@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <h1><a href="#home">John Doe</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="profile.jpg" alt="John Doe Profile Picture" class="profile-img">
+                <div class="intro-text">
+                    <h2>Hi, I'm John Doe.</h2>
+                    <p class="tagline">A passionate Web Developer creating beautiful and functional digital experiences.</p>
+                    <a href="#portfolio" class="btn primary-btn">View My Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a dedicated and creative web developer with a strong foundation in HTML, CSS, and JavaScript. I love transforming ideas into functional and aesthetically pleasing websites. My goal is to build user-centric designs that solve real-world problems.</p>
+                <div class="skills">
+                    <h3>Skills:</h3>
+                    <div class="skill-list">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>E-commerce Site</h3>
+                    <p>A fully functional e-commerce platform built with React and Node.js.</p>
+                    <button class="btn view-btn">View Project</button>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Modern Landing Page</h3>
+                    <p>A responsive landing page designed for a tech startup.</p>
+                    <button class="btn view-btn">View Project</button>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Task Manager App</h3>
+                    <p>A dynamic task management application using vanilla JavaScript.</p>
+                    <button class="btn view-btn">View Project</button>
+                </div>
+            </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="app">App</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-message">Have a project in mind or just want to say hello? Feel free to reach out!</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+                <p id="formStatus" class="status-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> John Doe. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/johndoe" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+                <a href="https://github.com/johndoe" target="_blank" aria-label="GitHub">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
